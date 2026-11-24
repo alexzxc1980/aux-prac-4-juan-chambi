@@ -56,6 +56,10 @@ Abrir http://localhost:8080/swagger-ui/index.html. La especificación JSON está
 
 ## Render
 
-Crear PostgreSQL y un Web Service con este repositorio y entorno Docker, en la misma región. Usar el host interno de PostgreSQL en `DB_URL` con el formato `jdbc:postgresql://HOST:5432/DATABASE`; configurar `DB_USERNAME` y `DB_PASSWORD` en el panel de Render. El servicio lee el puerto que Render entrega en `PORT`.
+Backend publicado: https://aux-prac-4-juan-chambi.onrender.com/api/books
+
+Swagger público: https://aux-prac-4-juan-chambi.onrender.com/swagger-ui/index.html
+
+`render.yaml` configura el Web Service Docker y PostgreSQL en Ohio. Las variables `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USERNAME` y `DB_PASSWORD` se obtienen de la base mediante `fromDatabase`. El servicio lee el puerto que Render entrega en `PORT`.
 
 La ruta de comprobación del servicio es `/api/books`. El Dockerfile compila y ejecuta la aplicación; no contiene credenciales.
